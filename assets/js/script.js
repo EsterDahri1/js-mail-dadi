@@ -23,7 +23,7 @@ Mail
 */
 
 //Metto il bottone in una costante
-const button = document.querySelector('button');
+const button = document.querySelector('.btn');
 
 
 //Se schiaccio il bottone mi dà il risultato
@@ -63,4 +63,24 @@ button.addEventListener('click', function() {
 //Creo array con le mail
 const mailingList = ['lorem@boomail.com', 'ipsum@boomail.com', 'magna@boomail.com', 'charta@boomail.com', 'libertatum@boomail.com'];
 
+//Aggiungo il bottone
+const submit = document.querySelector('.submit');
+
+//Prendo form con getElementById 
+let userMail = document.getElementById('user_mail');
+
+//Schiaccio il bottone per inviare
+submit.addEventListener('click', function (){
+    //Cerco tra le mail della lista quindi faccio un loop
+    for (let i = 0; i < mailingList.length; i++) {
+        const email = mailingList[i];
+
+        if (mailingList.includes(email)) {
+            console.log('Benvenuto!');
+        } else {
+            console.log('Non sei invitato!');
+        }
+
+    }
+});
 
