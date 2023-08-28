@@ -18,17 +18,25 @@ Mail
 ##TOOLS
     - variabile
     - math random 
+    - funzione click
     - if a>b hai vinto! / else a<b hai perso!
 */
 
-//Genera numero random da 1 a 6 
-const userChoice = Math.ceil(Math.random()*6);
-const computerChoice = Math.ceil(Math.random()*6);
+//Metto il bottone in una costante
+const button = document.querySelector('button');
 
 
-//Condizione chi ha il numero più alto 
-if(userChoice > computerChoice){
-    console.log('Hai vinto! 🎉');
-}else{
-    console.log('Hai perso! 😭');
-}
+//Se schiaccio il bottone mi dà il risultato
+button.addEventListener('click', function() {
+    //Genera numero random da 1 a 6 
+    const userChoice = Math.ceil(Math.random() * 6);
+    const computerChoice = Math.ceil(Math.random() * 6);
+
+    //Condizione chi ha il numero più alto 
+    if (userChoice > computerChoice) {
+        console.log('Hai vinto! 🎉');
+    } else {
+        console.log('Hai perso! 😭');
+    }
+})
+
