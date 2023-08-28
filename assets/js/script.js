@@ -52,35 +52,3 @@ button.addEventListener('click', function() {
 })
 
 
-/*
-
-##TOOLS mail
-    - Creo array con list mail
-    - Prendo form con getElementById 
-    - Se mail fa parte della lista allora messaggio benvenuto altrimenti non sei invitato
-*/
-
-//Creo array con le mail
-const mailingList = ['lorem@boomail.com', 'ipsum@boomail.com', 'magna@boomail.com', 'charta@boomail.com', 'libertatum@boomail.com'];
-
-//Aggiungo il bottone
-const submit = document.querySelector('.submit');
-
-//Prendo form con getElementById 
-let userMail = document.getElementById('user_mail');
-
-//Schiaccio il bottone per inviare
-submit.addEventListener('click', function (){
-    //Cerco tra le mail della lista quindi faccio un loop
-    for (let i = 0; i < mailingList.length; i++) {
-        const email = mailingList[i];
-
-        if (mailingList.includes(email)) {
-            console.log('Benvenuto!');
-        } else {
-            console.log('Non sei invitato!');
-        }
-
-    }
-});
-
