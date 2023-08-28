@@ -15,7 +15,7 @@ Mail
 
 /*
 
-##TOOLS
+##TOOLS Gioco dei dadi
     - variabile
     - math random 
     - funzione click
@@ -50,4 +50,17 @@ button.addEventListener('click', function() {
         document.querySelector('.message').innerHTML = `Hai perso! 😭`;
     }
 })
+
+
+/*
+
+##TOOLS mail
+    - Creo array con list mail
+    - Prendo form con getElementById 
+    - Se mail fa parte della lista allora messaggio benvenuto altrimenti non sei invitato
+*/
+
+//Creo array con le mail
+const mailingList = ['lorem@boomail.com', 'ipsum@boomail.com', 'magna@boomail.com', 'charta@boomail.com', 'libertatum@boomail.com'];
+
 
