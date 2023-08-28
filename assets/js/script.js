@@ -7,11 +7,7 @@ console.log('hello');
 Gioco dei dadi
 - Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. 
 - Stabilire il vincitore, in base a chi fa il punteggio più alto.
-
-Mail
-- Chiedi all'utente la sua email 
-- Controlla che sia nella lista di chi può accedere 
-- Stampa un messaggio appropriato sull’esito del controllo.*/
+*/
 
 /*
 
@@ -49,6 +45,46 @@ button.addEventListener('click', function() {
         document.getElementById('computer_result').innerHTML = computerChoice;
         document.querySelector('.message').innerHTML = `Hai perso! 😭`;
     }
+});
+
+
+/*Mail
+- Chiedi all'utente la sua email 
+- Controlla che sia nella lista di chi può accedere 
+- Stampa un messaggio appropriato sull’esito del controllo.*/
+
+/*
+#Tools
+- Inserisco l'input in costante
+- creo array
+- creo la funzionalità del bottone
+- uso for per capire se la mail fa parte della lista
+- stampa messaggio per esito del controllo
+*/
+
+//Creo array
+const mailingList = ['lorem@boomail.com', 'ipsum@boomail.com', 'cicero@boomail.com', 'catullo@boomail.com', 'cesare@boomail.com'];
+console.log(mailingList);
+
+//Inserisco l'input in costante
+let userMail = document.getElementById('user_mail');
+console.log(userMail);
+
+//Creo la funzionalità del bottone
+const sendBtn = document.getElementById('invia');
+console.log(sendBtn);
+
+sendBtn.addEventListener('click', function () {
+    
+    for (let i = 0; i < mailingList.length; i++) {
+        const element = mailingList[i];
+        // console.log(element);
+        
+        if (mailingList.indexOf === element){
+            console.log('Benvenuto!');
+        }else {
+            console.log('Non sei invitato. Sorry.');
+        }
+    }
+    
 })
-
-
