@@ -35,8 +35,19 @@ button.addEventListener('click', function() {
     //Condizione chi ha il numero più alto 
     if (userChoice > computerChoice) {
         console.log('Hai vinto! 🎉');
+        document.getElementById('user_result').innerHTML = userChoice;
+        document.getElementById('computer_result').innerHTML = computerChoice;
+        document.querySelector('.message').innerHTML = `Hai vinto! 🎉`;
+    } else if(userChoice === computerChoice){
+        console.log('Pari ! Riprova!');
+        document.getElementById('user_result').innerHTML = userChoice;
+        document.getElementById('computer_result').innerHTML = computerChoice;
+        document.querySelector('.message').innerHTML = `Pari ! Riprova!`;
     } else {
         console.log('Hai perso! 😭');
+        document.getElementById('user_result').innerHTML = userChoice;
+        document.getElementById('computer_result').innerHTML = computerChoice;
+        document.querySelector('.message').innerHTML = `Hai perso! 😭`;
     }
 })
 
