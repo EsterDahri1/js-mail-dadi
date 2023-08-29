@@ -88,3 +88,40 @@ sendBtn.addEventListener('click', function () {
     }
     
 })
+
+/*Correzione
+
+// Creo un array delle email
+const partecipants = [
+    'lorem@boomail.com', 
+    'ipsum@boomail.com', 
+    'cicero@boomail.com', 
+    'catullo@boomail.com', 
+    'cesare@boomail.com'
+];
+//chiedo all'utente il suo indirizzo email
+const partecipantEmail = 'cicero@boomail.com';
+let canAccess = false;
+
+//loop sulla list 
+
+//cotrollo se è presente nella lista
+//se vero metti accesss to true
+
+for (let i = 0; i < partecipants.length; i++) {
+    const thisPartecipantEmail = partecipants[i];
+    console.log(thisPartecipantEmail);
+
+    if(thisPartecipantEmail === partecipantEmail){
+        canAccess = true;
+    }
+}
+
+console.log(canAccess);
+
+if(canAccess){
+    console.log('Welcome to the party');
+}else {
+    console.log('Go home')
+}
+*/
