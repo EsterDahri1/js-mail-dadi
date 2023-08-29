@@ -80,10 +80,8 @@ sendBtn.addEventListener('click', function () {
         const element = mailingList[i];
         // console.log(element);
         
-        if (mailingList.indexOf === element){
+        if (element === mailingList){
             console.log('Benvenuto!');
-        }else {
-            console.log('Non sei invitato. Sorry.');
         }
     }
     
