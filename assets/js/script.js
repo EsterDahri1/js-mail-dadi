@@ -62,32 +62,10 @@ button.addEventListener('click', function() {
 - stampa messaggio per esito del controllo
 */
 
-//Creo array
-const mailingList = ['lorem@boomail.com', 'ipsum@boomail.com', 'cicero@boomail.com', 'catullo@boomail.com', 'cesare@boomail.com'];
-console.log(mailingList);
 
-//Inserisco l'input in costante
-let userMail = document.getElementById('user_mail');
-console.log(userMail);
 
-//Creo la funzionalità del bottone
-const sendBtn = document.getElementById('invia');
-console.log(sendBtn);
-
-sendBtn.addEventListener('click', function () {
-    
-    for (let i = 0; i < mailingList.length; i++) {
-        const element = mailingList[i];
-        // console.log(element);
-        
-        if (element === mailingList){
-            console.log('Benvenuto!');
-        }
-    }
-    
-})
-
-/*Correzione
+//const bottone del form
+const send = document.getElementById('invia');
 
 // Creo un array delle email
 const partecipants = [
@@ -97,29 +75,31 @@ const partecipants = [
     'catullo@boomail.com', 
     'cesare@boomail.com'
 ];
+
 //chiedo all'utente il suo indirizzo email
 const partecipantEmail = 'cicero@boomail.com';
 let canAccess = false;
 
-//loop sulla list 
-
-//cotrollo se è presente nella lista
-//se vero metti accesss to true
-
-for (let i = 0; i < partecipants.length; i++) {
-    const thisPartecipantEmail = partecipants[i];
-    console.log(thisPartecipantEmail);
-
-    if(thisPartecipantEmail === partecipantEmail){
-        canAccess = true;
+//schiaccio il bottone 
+send.addEventListener('click', function(){
+    //loop sulla list 
+    for (let i = 0; i < partecipants.length; i++) {
+        const thisPartecipantEmail = partecipants[i];
+        console.log(thisPartecipantEmail);
+    
+        if(thisPartecipantEmail === partecipantEmail){
+            canAccess = true;
+        }
     }
-}
+    
+    //console.log(canAccess);
+    
+    if(canAccess === true){
+        console.log('Welcome to the party');
+        document.getElementById('output').innerHTML = 'Welcome to the party'
+    }else {
+        console.log('Go home');
+        document.getElementById('output').innerHTML = 'Go home!'
+    }
+})
 
-console.log(canAccess);
-
-if(canAccess){
-    console.log('Welcome to the party');
-}else {
-    console.log('Go home')
-}
-*/
