@@ -90,7 +90,7 @@ send.addEventListener('click', function(){
         if(thisPartecipantEmail === partecipantEmail){
             canAccess = true;
         }
-    }
+    };
     
     //console.log(canAccess);
     
@@ -100,6 +100,6 @@ send.addEventListener('click', function(){
     }else {
         console.log('Go home');
         document.getElementById('output').innerHTML = 'Go home!'
-    }
-})
+    };
+});
 
