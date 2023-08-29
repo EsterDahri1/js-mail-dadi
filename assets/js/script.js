@@ -76,28 +76,30 @@ const partecipants = [
     'cesare@boomail.com'
 ];
 
-//chiedo all'utente il suo indirizzo email
-const partecipantEmail = 'cicero@boomail.com';
-let canAccess = false;
+
 
 //schiaccio il bottone 
-send.addEventListener('click', function(){
+send.addEventListener('click', function () {
+    //chiedo all'utente il suo indirizzo email
+    const partecipantEmail = document.getElementById('user_mail').value;
+    let canAccess = false;
+
     //loop sulla list 
     for (let i = 0; i < partecipants.length; i++) {
         const thisPartecipantEmail = partecipants[i];
         console.log(thisPartecipantEmail);
-    
-        if(thisPartecipantEmail === partecipantEmail){
+
+        if (thisPartecipantEmail === partecipantEmail) {
             canAccess = true;
         }
     };
-    
+
     //console.log(canAccess);
-    
-    if(canAccess === true){
+
+    if (canAccess === true) {
         console.log('Welcome to the party');
         document.getElementById('output').innerHTML = 'Welcome to the party'
-    }else {
+    } else {
         console.log('Go home');
         document.getElementById('output').innerHTML = 'Go home!'
     };
